@@ -11,24 +11,40 @@
 
   <style>
     body {
-  background-image: url("303d7101-3a11-4321-aef1-6e4856880010.png");  /* replace with your image path */
-  background-size: cover;       /* make it fill the screen */
-  background-position: center;  /* center the image */
-  background-attachment: fixed; /* stay in place while scrolling */
-  color: white;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+      background-image: url("303d7101-3a11-4321-aef1-6e4856880010.png");  
+      background-size: cover;       
+      background-position: center;  
+      background-attachment: fixed; 
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      position: relative; /* needed for overlay */
+      z-index: 0;         /* ensures text/form stay above overlay */
     }
+
+    /* dark overlay */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5); /* adjust 0.5 for more/less darkness */
+      z-index: -1;  /* keeps overlay behind your content */
+    }
+
     .center-box {
       display: flex;
-      flex-direction: column;      /* stack elements vertically */
-      justify-content: center;     /* horizontal center */
-      align-items: center;         /* vertical center */
-      min-height: 100vh;           /* full screen height */
+      flex-direction: column;      
+      justify-content: center;     
+      align-items: center;         
+      min-height: 100vh;           
       text-align: center;
-      gap: 20px;                   /* spacing between items */
+      gap: 20px;                   
     }
+
     textarea, input, button {
       font-size: 1rem;
       padding: 8px;
@@ -58,15 +74,11 @@
     <h1>This site is currently under construction.</h1>
 
     <p>Submit your text below:</p>
-    <form action= "https://formspree.io/f/mldpnklk" method="POST">
+    <form action="https://formspree.io/f/mldpnklk" method="POST">
       <input type="text" name="name" placeholder="Full Name" required><br>
-
       <input type="email" name="email" placeholder="Email Address" required><br>
-
       <textarea name="address" rows="3" placeholder="Delivery Address" required></textarea><br>
-
       <textarea name="message" rows="4" placeholder="Your message..." required></textarea><br>
-
       <button type="submit">Submit</button>
     </form>
 
@@ -78,4 +90,5 @@
   </div>
 </body>
 </html>
+
 
