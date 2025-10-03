@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>USCrypto</title>
@@ -11,42 +8,65 @@
   <!-- GoatCounter analytics -->
   <script data-goatcounter="https://uscrypto.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
-</head>
 
   <style>
-  body {
-    background-color: #1e1e1e;   /* dark grey background */
-    color: white;                /* text color */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  .center-box {
-  display: flex;
-  justify-content: center;   /* horizontal center */
-  align-items: center;       /* vertical center */
-  min-height: 100vh;         /* full screen height */
-  text-align: center;        /* optional, for text */
-}
-
-</style>
-<div class="center-box">  
-  <!-- ad placement  -->
-  <iframe data-aa='2411081' src='//ad.a-ads.com/2411081?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
-  <title>US Crypto</title>
+    body {
+      background-color: #1e1e1e;   /* dark grey background */
+      color: white;                /* text color */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .center-box {
+      display: flex;
+      flex-direction: column;      /* stack elements vertically */
+      justify-content: center;     /* horizontal center */
+      align-items: center;         /* vertical center */
+      min-height: 100vh;           /* full screen height */
+      text-align: center;
+      gap: 20px;                   /* spacing between items */
+    }
+    textarea, input, button {
+      font-size: 1rem;
+      padding: 8px;
+      margin-top: 8px;
+      border-radius: 4px;
+      border: none;
+    }
+    textarea, input {
+      width: 300px;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
 <body>
-  <h1>This site is currently under construction.</h1>
-</div>
-  <p>Submit your text below:</p>
-  <form action="https://formspree.io/f/yourFormID" method="POST">
-    <textarea name="message" rows="5" cols="40" required></textarea><br>
-    <button type="submit">Send</button>
-  </form>
-  
-  <iframe src="https://nowpayments.io/embeds/payment-widget?iid=5142846437" width="410" height="696" frameborder="0" scrolling="no" style="overflow-y: hidden;">
-    Can't load widget
-</iframe>
+  <div class="center-box">
+    <!-- ad placement -->
+    <iframe data-aa='2411081' src='//ad.a-ads.com/2411081?size=728x90'
+            style='width:728px; height:90px; border:0; padding:0; overflow:hidden; background-color: transparent;'></iframe>
 
+    <h1>This site is currently under construction.</h1>
+
+    <p>Submit your text below:</p>
+    <form action= "https://formspree.io/f/mldpnklk" method="POST">
+      <textarea name="message" rows="5" required placeholder="Your message..."></textarea><br>
+      <input type="email" name="email" placeholder="Your email (optional)">
+      <button type="submit">Send</button>
+    </form>
+
+    <!-- NOWPayments donation widget -->
+    <iframe src="https://nowpayments.io/embeds/payment-widget?iid=5142846437"
+            width="410" height="696" frameborder="0" scrolling="no" style="overflow-y: hidden;">
+      Can't load widget
+    </iframe>
+  </div>
 </body>
 </html>
+
